@@ -170,7 +170,7 @@ copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) A
   enable = false
 
   [params.liveChat]
-  enable = false
+  enable = true
 
   # google map
   [params.googleMap]
