@@ -1,0 +1,18 @@
+{{ define "main"}}
+{{ with site.Data.error.error }}
+<section class="my-5 py-4 bg-gradient position-relative">
+  <img src="{{ .overlayImage | absURL }}" class="img-fluid overlay-image" alt="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white kiona">{{ .title | markdownify }}</h2>
+        <p class="text-white">{{ .content | markdownify }}</p>
+        {{ with .button }}
+        <a href="{{ .link | absURL }}" class="btn btn-dark">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

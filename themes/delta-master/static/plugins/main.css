@@ -1,0 +1,24 @@
+@charset "utf-8";
+@font-face {
+    font-family: Kiona-Regular;
+    src: url(Kiona-Regular.ttf) format('truetype');
+}
+.kiona {
+    font-family: Kiona-Regular;
+}
+.nav-link {
+    color: #666666;
+}
+.card {
+    background-color: #999999;
+    border: solid #0066cc;
+}
+.card-title {
+    color: #222222;
+    font-family: Kiona-Regular;
+}
+
+a.active.nav-link {
+    background-color: #cccccc !important;
+}
+

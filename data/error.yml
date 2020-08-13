@@ -1,0 +1,9 @@
+error:
+  enable: true
+  title: "Where are you going??"
+  content: "We can't find the page you were looking for.<br>Click the button below to return to the homepage."
+#  image: "images/bottle.png"
+  overlayImage: "images/overlay-for-web.png"
+  button:
+    label: "Return Home"
+    link: "index.html"

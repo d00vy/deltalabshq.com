@@ -1,0 +1,186 @@
+######################## default configuration ####################
+baseURL = "https://examplesite.com"
+languageCode = "en-us"
+title = "Delta Labs HQ | Original. Authentic. Committed."
+theme = "delta-master"
+summaryLength = "25"
+paginate = 10
+disqusShortname = ""
+footnotereturnlinkcontents = "<sup>^</sup>"
+
+## Markup Processing w/ HTML
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+############################# Plugins ##############################
+[params.plugins]
+  # CSS Plugins
+  [[params.plugins.css]]
+  link = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  link = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  link = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  link = "plugins/main.css"
+#  [[params.plugins.css]]
+#  link = "https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.css"
+  [[params.plugins.css]]
+  link = "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  link = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  link = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  link = "plugins/slick/slick.min.js"
+#  [[params.plugins.js]]
+#  link = "plugins/google-map/gmap.js"
+
+############################## navigation ###############################
+[menu]
+  [[menu.main]]
+  name = "Products"
+  URL = "products"
+  weight = 1
+  
+  [[menu.main]]
+  name = "Blog"
+  URL = "blog"
+  weight = 2
+  
+  [[menu.main]]
+  name = "FAQ"
+  URL = "faq"
+  weight = 3
+  
+#  [[menu.main]]
+#  name = "Contact"
+#  URL = "contact"
+#  weight = 4
+
+  ############# footer menu #############
+  [[menu.footer]]
+  name = "Products"
+  URL = "products"
+  weight = 1
+
+  [[menu.footer]]
+  name = "About Us"
+  URL = "about"
+  weight = 2
+
+  [[menu.footer]]
+  name = "Blog"
+  URL = "blog"
+  weight = 3
+  
+  [[menu.footer]]
+  name = "FAQ"
+  URL = "faq"
+  weight = 4
+
+  [[menu.footer]]
+  name = "Terms & Conditions"
+  URL = "terms-conditions"
+  weight = 5
+
+  [[menu.footer]]
+  name = "Privacy Policy"
+  URL = "privacy-policy"
+  weight = 6
+
+#  [[menu.footer]]
+#  name = "Contact"
+#  URL = "contact"
+#  weight = 6
+
+#################### default parameters ################################
+[params]
+logo = "images/delta-labs-logo-small.png"
+bannerLogo ="images/logo-banner.png"
+home = "Home"
+
+# Meta data
+description = "This is meta description"
+author = "Delta Labs LLC"
+
+# Contact Information
+mobile = "501-555-4200"
+email = "support@deltalabshq.com"
+# location = "Little Rock, AR"
+
+# disclaimer
+disclaimer = "We believe in our products, and we believe in your ability to discover what works best for you.<br>However, the statements regarding these products have not been evaluated by the Food and Drug Administration.<br>These products are not intended to diagnose, treat, cure or prevent any disease.<br/>Delta Labs LLC does not sell or distribute any products that are in violation of the United States Controlled Substances Act.<br/>By using this site, you're agreeing to follow the [Terms & Conditions](terms-conditions) and [Privacy Policy](privacy-policy)."
+
+# copyright
+copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) All Rights Reserved |<br>| Based on [Themefisher](https://themefisher.com) by [d00vy](https://github.com/d00vy) |"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+  preloader = "/images/animated-triangle.gif" # use .png , .svg or .gif format
+
+  # Product Rating
+  # it works with https://rating-widget.com/ , you will get the ID and publicKey after creating your account there.
+  [params.rating]
+  enable = true
+  websiteID = "444334"
+  publicKey = "811cf0927332bf51f2e12f84608594ac"
+
+  # Social Site
+  [[params.social]]
+  icon = "ti-facebook"
+  link = "#"
+  
+  [[params.social]]
+  icon = "ti-twitter-alt"
+  link = "#"
+  
+#  [[params.social]]
+#  icon = "ti-youtube"
+#  link = "#"
+  
+  [[params.social]]
+  icon = "ti-instagram"
+  link = "#"
+  
+#  [[params.social]]
+#  icon = "ti-pinterest"
+#  link = "#"
+
+  # Contact Form
+  [params.contact]
+  formAction = "#" # contact form works with formspree.io
+
+  # Snipcart
+  [params.snipcart]
+  testing = false
+  live = false
+  preversion = true
+  jsLink = "https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.js"
+  testingAPI = "MGZhMDRhMWMtYjhkNi00MDNmLThhMTktMzRkNGJkOGRlN2RmNjM3MzI4NTE0MDcxMjQ3Mzg3"
+  liveAPI = ""
+
+
+  [params.tawk]
+  enable = false
+
+  [params.liveChat]
+  enable = false
+
+  # google map
+  [params.googleMap]
+  enable = false
+  gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+  mapLatitude = "51.5223477"
+  mapLongitude = "-0.1622023"
+  mapMarker = "images/marker.png"
+
+  # Google Analitycs
+  [params.googleAnalytics]
+  enable = false
+  googleAnalitycsID = "" # Your ID

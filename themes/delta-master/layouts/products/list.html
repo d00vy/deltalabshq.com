@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      {{ range .Data.Pages }}
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card border-1 text-center p-2">
+          <a href="{{ .Permalink }}">
+            {{ range first 1 .Params.Images }}
+            <img src="{{ .image | absURL }}" alt="{{ .Title }}" class="card-img-top">
+            {{ end }}
+          </a>
+          <div class="card-body">
+            <a href="{{ .Permalink }}" class="h4 card-title">{{ .Title }}</a>
+            <p>{{ .Params.Description }}</p>
+            <div class="mb-4">
+              <span class="lead text-primary">${{ .Params.Price }}</span>
+              <s>{{ .Params.PriceBefore }}</s>
+            </div>
+            <button class="snipcart-add-item btn btn-primary" 
+            data-item-id="{{ .Params.ProductID }}"
+            data-item-name="{{ .Title }}" 
+            {{ range first 1 .Params.Images }} 
+            data-item-image="{{ .image | absURL }}"
+            {{ end }} 
+            data-item-price="{{ .Params.Price }}" 
+            data-item-url="{{ .Permalink }}" 
+  
+            {{ if .Params.tincture }}
+            data-item-custom1-name="Choose Flavor"
+            data-item-custom1-required="true"
+            data-item-custom1-options="{{ delimit .Params.flavors "|" }}"
+            {{ end }}
+  
+            {{ if .Params.vape }}
+            data-item-custom1-name="Choose Flavor"
+            data-item-custom1-required="true"
+            data-item-custom1-options="{{ delimit .Params.flavors "|" }}"
+            {{ end }} >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "cta.html" . }}
+
+{{ end }}
