@@ -1,4 +1,10 @@
 faqItem:
+  - title : Is shipping really free?
+    content : Yup! You won't ever have to worry about paying for shipping from us.
+
+  - title : You offer free local delivery?
+    content : We sure do! If you live near one of our stores we will deliver your products right to you with no extra charges.
+ 
   - title : Do I need a Medical Card to buy any of Delta Labs products?
     content : No, you do not need a Medical Card to buy any of our products, as Delta Labs does not manufacture, sell, or distribute any products that are in violation of the United States Controlled Substances Act.
 
@@ -6,16 +12,16 @@ faqItem:
     content : Yes! <br> All of Delta Labs products are legal under the [Agriculture Improvement Act of 2018](https://www.agriculture.senate.gov/2018-farm-bill). All of our products are derived from industrial hemp and contain less than 0.3% THC on a dry weight basis - verified by independent laboratory analysis - and therefore is not subject to the same prohibitory federal and state laws concerning marijuana (cannabis with higher than 0.3% THC).
 
   - title : Will your products cause me to fail a drug test?
-    content : Drug tests either test for THC or a metabolite of THC, and while all of Delta Labs products are lab tested to contain less than 0.3% THC, we advise our customers to consume our products at their own risk if expecting a THC drug test in the near future. While the maximum concentration of 0.3% THC will not typically cause a failed drug test, there have been anecdotal reports of full spectrum hemp extracts causing one.
+    content : Not likely. Drug tests either test for THC or a metabolite of THC, and while all of Delta Labs products are lab tested to contain less than 0.3% THC, we advise our customers to consume our products at their own risk if expecting a THC drug test in the near future. While the maximum concentration of 0.3% THC will not typically cause a failed drug test, there have been anecdotal reports of full spectrum hemp extracts causing one.
 
   - title : I need something unique. Can you make it?
     content : Possibly! Please contact us directly with more information about what you're looking for and we will do our best to help. 
 
   - title : Can I be allergic to hemp products?
-    content : N/A
+    content : Most people are not allergic to hemp or hemp-derived products, but as with anything you put on or in your body, you must be careful until you know for sure that you are not allergic. We recommend speaking to your doctor if you are concerned having an allergic reaction to hemp products.
 
   - title : How much do I use?
-    content : The proper servings of hemp extracts and isolates are dependent on a multitude of factors including weight, genetics, age, sex, and tolerance. All staff at Delta Labs are trained and experienced with the applications of hemp products, and take pride in helping our customers find the best products and dosages for their needs.<br>For simplicity, we suggest a typical daily serving recommendation of 1mg per 0.25*(Body weight in lbs). For example, someone weighing 160lbs would benefit with approximately 40mg per day (0.25*160=40).
+    content : The proper servings of hemp extracts and isolates are dependent on a multitude of factors including weight, genetics, age, sex, and tolerance. All staff at Delta Labs are trained and experienced with the applications of hemp products, and take pride in helping our customers find the best products and dosages for their needs. Feel free to contact us if you need any assistance.<br>For simplicity, we suggest a typical daily serving recommendation of 1mg per 0.25*(Body weight in lbs). For example, someone weighing 160lbs would benefit with approximately 40mg per day (0.25*160=40).
 
   - title : Do you offer any discounts?
     content : Yes! We're happy to offer discounts for military and other uniformed public service members. Please contact us for any questions concerning discounts.

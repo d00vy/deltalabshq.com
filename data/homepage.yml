@@ -26,8 +26,8 @@ about:
 cta:
   enable: true
   title: "Get a Free Hand Sanitizer!"
-  content: "With any purchase over $30. Available for limited time only. <br> Grab one while you still can!"
-  image: "images/bottle.png"
+  content: "With any purchase over $25. Available for limited time only. <br> Grab one while you still can!"
+  #image: "images/cta-hand-sanitizer.png"
   overlayImage: "images/overlay-for-web.png"
   button:
     label: "Shop Now"
@@ -46,7 +46,7 @@ productSlider:
   link: "products"
   # product item comes from "content/products"
 
-########################## Product Slider ########################
+########################## Latest Blog Posts ########################
 latestPosts:
   enable: true
   title: "Read The Latest Posts"
@@ -89,29 +89,28 @@ testimonial:
       ######################## raw material #######################
 material:
   enable: false
-  title: "Ingredients Of Our Products"
-  subtitle: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-    dol."
+  title: "Clean, Simple, and Effective Ingredients"
+  subtitle: "We keep things simple, using clean and effective ingredients to deliver the best value to you at accessible prices."
   materialItem:
     # material item loop
-    - title: "Matcha Seeds"
+    - title: "Pure CBD Isolate"
       image: "images/material/material-1.png"
-      content: "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content: "CBD Isolate is the purest, safest form of CBD available"
 
     # material item loop
-    - title: "Aloe Vera"
+    - title: "Organic Carrier Oils"
       image: "images/material/material-2.png"
-      content: "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content: "All the oils we use are certified organic and good for you"
 
     # material item loop
-    - title: "Turmeric"
+    - title: "All Natural Flavorings"
       image: "images/material/material-3.png"
-      content: "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content: "We only use natural essential oils for our flavorings"
 
     # material item loop
-    - title: "Tulshi leaf"
+    - title: "Sugar-Free Sweeteners"
       image: "images/material/material-4.png"
-      content: "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content: ""
 
 ########################### Advantage #########################
 advantage:

@@ -67,36 +67,6 @@
 {{ partial "cta.html" . }}
 {{ end }}
 
-<!-- material -->
-{{ if site.Data.homepage.material.enable }}
-{{ with site.Data.homepage.material }}
-<section class="section pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mx-auto text-center">
-        <h2>{{ .title | markdownify }}</h2>
-        <p>{{ .subtitle | markdownify }}</p>
-      </div>
-    </div>
-    <div class="row">
-      {{ range .materialItem }}
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card border-0 text-center">
-          <img src="{{ .image | absURL }}" alt="material" class="card-img-top border-0">
-          <div class="card-body">
-            <h4>{{ .title | markdownify }}</h4>
-            <p>{{ .content | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
-{{ end }}
-<!-- /material -->
-
 <!-- advantage -->
 {{ if site.Data.homepage.advantage.enable }}
 {{ with site.Data.homepage.advantage }}
@@ -178,8 +148,8 @@
             <a href="{{ .Permalink }}" class="h4">{{ .Title }}</a>
             <p>{{ .Params.Description }}</p>
             <div class="mb-4">
-              <span class="lead text-primary">{{ .Params.Price }}</span>
-              <s>{{ .Params.PriceBefore }}</s>
+              <span class="lead text-primary">${{ .Params.Price }}</span>
+              <s>${{ .Params.PriceBefore }}</s>
             </div>
             <button class="snipcart-add-item btn btn-sm btn-outline-primary" data-item-id="{{ .Params.ProductID }}"
               data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
@@ -199,7 +169,7 @@
 <!-- product slider -->
 {{ if site.Data.homepage.productSlider.enable }}
 {{ with site.Data.homepage.productSlider }}
-<section class="section">
+<section class="section pb-0">
   <div class="container">
     <div class="row mb-3">
       <div class="col-12 text-center">
@@ -208,7 +178,7 @@
     </div>
     <div class="row testimonial-slider">
       {{ range (where site.RegularPages "Type" "products") }}
-      <div class="col-lg-4 col-sm-6 mb-1">
+      <div class="col-lg-4 col-sm-6">
         <div class="card border-1 text-center">
           <a href="{{ .Permalink }}">
             {{ range first 1 .Params.Images }}
@@ -217,16 +187,38 @@
           </a>
           <div class="card-body">
             <a href="{{ .Permalink }}" class="h4 card-title">{{ .Title }}</a>
-            <p>{{ .Params.Description }}</p>
+            <p>{{ .Params.Description | markdownify }}</p>
             <div class="mb-4">
-              <span class="lead text-primary">{{ .Params.Price }}</span>
-              <s>{{ .Params.PriceBefore }}</s>
+              <span class="lead text-primary">${{ .Params.Price }}</span>
+              <s>{{ with .Params.PriceBefore }} ${{ . }}{{ end }}</s>
             </div>
-            <button class="snipcart-add-item btn btn-sm btn-outline-primary" data-item-id="{{ .Params.ProductID }}"
-              data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
-              {{ end }} data-item-price="{{ .Params.Price }}" data-item-url="{{ .Permalink }}">
-              Add to cart
-            </button>
+            <button class="snipcart-add-item btn btn-primary" 
+            data-item-id="{{ .Params.ProductID }}"
+            data-item-name="{{ .Title }}" 
+            {{ range first 1 .Params.Images }} 
+            data-item-image="{{ .image | absURL }}"
+            {{ end }} 
+            data-item-price="{{ .Params.Price }}" 
+            data-item-url="{{ .Permalink }}" 
+  
+            {{ with .Params.flavors }}
+            data-item-custom1-name="Choose Flavor"
+            data-item-custom1-required="true"
+            data-item-custom1-options="{{ delimit . "|" }}"
+            {{ end }}
+            {{ with .Params.dosage }}
+            data-item-custom2-name="Choose Dosage"
+            data-item-custom2-required="true"
+            data-item-custom2-options="{{ delimit . "|" }}"
+            {{ end }}
+            {{ with .Params.size }}
+            data-item-custom3-name="Choose Size"
+            data-item-custom3-required="true"
+            data-item-custom3-options="{{ delimit . "|" }}"
+            {{ end }}
+            >
+            Add to cart
+          </button>
           </div>
         </div>
       </div>
@@ -237,6 +229,36 @@
 {{ end }}
 {{ end }}
 <!-- /product slider -->
+
+<!-- material -->
+{{ if site.Data.homepage.material.enable }}
+{{ with site.Data.homepage.material }}
+<section class="section pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2>{{ .title | markdownify }}</h2>
+        <p>{{ .subtitle | markdownify }}</p>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .materialItem }}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card border-0 text-center">
+          <img src="{{ .image | absURL }}" alt="material" class="card-img-top border-0">
+          <div class="card-body">
+            <h4>{{ .title | markdownify }}</h4>
+            <p>{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /material -->
 
 <!-- testimonial -->
 {{ if site.Data.homepage.testimonial.enable }}
@@ -275,7 +297,8 @@
 {{ end }}
 <!-- /testimonial -->
 
-<section class="section pt-0">
+<!-- 2 recent blog posts -->
+<section class="section">
   <div class="container">
     <div class="row justify-content-around align-items-center mb-3">
       <div class="col-12 text-center">
@@ -307,6 +330,7 @@
     {{ template "_internal/pagination.html" . }}
   </div>
 </section>
+<!-- end 2 recent blog posts -->
 
 {{ if site.Data.homepage.cta.enable }}
 {{ partial "cta.html" . }}

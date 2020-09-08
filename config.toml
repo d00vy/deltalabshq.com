@@ -1,12 +1,11 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.com"
+baseURL = "https://deltalabshq.com"
 languageCode = "en-us"
 title = "Delta Labs HQ | Original. Authentic. Committed."
 theme = "delta-master"
 summaryLength = "25"
 paginate = 10
 disqusShortname = ""
-footnotereturnlinkcontents = "<sup>^</sup>"
 
 ## Markup Processing w/ HTML
 [markup]
@@ -42,13 +41,18 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 
 ############################## navigation ###############################
 [menu]
+#  [[menu.main]]
+#  name = "About"
+#  URL = "about"
+#  weight = 5
+
   [[menu.main]]
-  name = "Products"
+  name = "Shop"
   URL = "products"
   weight = 1
   
   [[menu.main]]
-  name = "Blog"
+  name = "Learn"
   URL = "blog"
   weight = 2
   
@@ -105,11 +109,11 @@ bannerLogo ="images/logo-banner.png"
 home = "Home"
 
 # Meta data
-description = "This is meta description"
+description = "Delta Labs HQ"
 author = "Delta Labs LLC"
 
 # Contact Information
-mobile = "501-555-4200"
+mobile = "501-747-1618"
 email = "support@deltalabshq.com"
 # location = "Little Rock, AR"
 
@@ -117,7 +121,7 @@ email = "support@deltalabshq.com"
 disclaimer = "We believe in our products, and we believe in your ability to discover what works best for you.<br>However, the statements regarding these products have not been evaluated by the Food and Drug Administration.<br>These products are not intended to diagnose, treat, cure or prevent any disease.<br/>Delta Labs LLC does not sell or distribute any products that are in violation of the United States Controlled Substances Act.<br/>By using this site, you're agreeing to follow the [Terms & Conditions](terms-conditions) and [Privacy Policy](privacy-policy)."
 
 # copyright
-copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) All Rights Reserved |<br>| Based on [Themefisher](https://themefisher.com) by [d00vy](https://github.com/d00vy) |"
+copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) All Rights Reserved |<br>"
 
   # Preloader
   [params.preloader]
@@ -132,21 +136,21 @@ copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) A
   publicKey = "811cf0927332bf51f2e12f84608594ac"
 
   # Social Site
-  [[params.social]]
-  icon = "ti-facebook"
-  link = "#"
+#  [[params.social]]
+#  icon = "ti-facebook"
+#  link = "#"
   
-  [[params.social]]
-  icon = "ti-twitter-alt"
-  link = "#"
+#  [[params.social]]
+#  icon = "ti-twitter-alt"
+#  link = "#"
   
 #  [[params.social]]
 #  icon = "ti-youtube"
 #  link = "#"
   
-  [[params.social]]
-  icon = "ti-instagram"
-  link = "#"
+#  [[params.social]]
+#  icon = "ti-instagram"
+#  link = "#"
   
 #  [[params.social]]
 #  icon = "ti-pinterest"

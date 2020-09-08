@@ -23,9 +23,9 @@
         {{ end }}
         <div class="my-4">
           <span class="kiona lead text-primary font-weight-bold">${{ .Params.Price }}</span>
-          <s>{{ .Params.PriceBefore }}</s>
+          <s>{{ with .Params.PriceBefore }} ${{ . }}{{ end }}</s>
         </div>
-        <h5>The Rundown</h5>
+        <h5>The Basics:</h5>
         <p>{{ .Params.ShortDescription | markdownify }}</p>
         <button class="snipcart-add-item btn btn-primary" 
           data-item-id="{{ .Params.ProductID }}"
@@ -36,17 +36,22 @@
           data-item-price="{{ .Params.Price }}" 
           data-item-url="{{ .Permalink }}" 
 
-          {{ if .Params.tincture }}
+          {{ with .Params.flavors }}
           data-item-custom1-name="Choose Flavor"
           data-item-custom1-required="true"
-          data-item-custom1-options="{{ delimit .Params.flavors "|" }}"
+          data-item-custom1-options="{{ delimit . "|" }}"
           {{ end }}
-
-          {{ if .Params.vape }}
-          data-item-custom1-name="Choose Flavor"
-          data-item-custom1-required="true"
-          data-item-custom1-options="{{ delimit .Params.flavors "|" }}"
-          {{ end }} >
+          {{ with .Params.dosage }}
+          data-item-custom2-name="Choose Dosage"
+          data-item-custom2-required="true"
+          data-item-custom2-options="{{ delimit . "|" }}"
+          {{ end }}
+          {{ with .Params.size }}
+          data-item-custom3-name="Choose Size"
+          data-item-custom3-required="true"
+          data-item-custom3-options="{{ delimit . "|" }}"
+          {{ end }}
+          >
           Add to cart
         </button>
 
@@ -75,8 +80,8 @@
             <div class="content">{{ .Content }}</div>
           </div>
           <div class="tab-pane fade" id="coas" role="tabpanel" aria-labelledby="coa-tab">
-            {{ range .Params.coaList }}
-              <object class="embed-responsive-item" data="{{ .coa | absURL}}" type="application/pdf" style="min-height:90vh;width:100%"></object>
+            {{ with .Params.coa }}
+              <object class="embed-responsive-item" data="{{ . | absURL}}" type="application/pdf" style="min-height:90vh;width:100%"></object>
             {{ end }}
           </div>
           <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specs-tab">

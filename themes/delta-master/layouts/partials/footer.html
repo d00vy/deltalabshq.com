@@ -93,7 +93,12 @@
 
 {{ if site.Params.snipcart.preversion }}
 {{ "<!-- snipcart api -->" | safeHTML }}
-<div hidden id="snipcart" data-api-key="{{ site.Params.snipcart.testingAPI }}"></div>
+<div hidden id="snipcart" data-api-key="{{- if hugo.IsProduction -}}
+{{ site.Params.snipcart.liveAPI }}
+{{- else -}}
+{{ site.Params.snipcart.testingAPI }}
+{{- end -}}"
+data-config-add-product-behavior="none"></div>
 <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"></script>
 {{ end }}
 
