@@ -167,7 +167,7 @@ copyright = "| Copyright &copy; 2020 [Delta Labs LLC](https://deltalabshq.com) A
   preversion = true
   jsLink = "https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.js"
   testingAPI = "MGZhMDRhMWMtYjhkNi00MDNmLThhMTktMzRkNGJkOGRlN2RmNjM3MzI4NTE0MDcxMjQ3Mzg3"
-  liveAPI = ""
+  liveAPI = "MGZhMDRhMWMtYjhkNi00MDNmLThhMTktMzRkNGJkOGRlN2RmNjM3MzI4NTE0MDcxMjQ3Mzg3"
 
 
   [params.tawk]
